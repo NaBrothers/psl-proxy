@@ -98,7 +98,6 @@ public class HttpUtils {
             httpResponse = httpClient.execute(httpPost);
             if(httpResponse.getStatusLine().getStatusCode() != 200){
                 response.setCode(httpResponse.getStatusLine().getStatusCode());
-                return response;
             }
             HttpEntity entity = httpResponse.getEntity();
             response.setData(EntityUtils.toString(entity));
